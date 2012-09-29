@@ -1,0 +1,103 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* 
+Main Variables:
+I'm placing an underscore before each variable
+because I'm using rather generic names
+I'm using the underscore
+to avoid any accidents:
+*/
+/* Total number of columns */
+/* Width of a single column */
+/* Width of the gutter */
+/* Calculate the total width: */
+/* 
+A Function to calculate width:
+Example usage: (based on default values)
+get_width(3, false) would return 240px
+get_width(3) or get_width(3, true) would return 220px;
+and plain get_width() or get_width would return 940px;
+*/
+/* 
+ClearFix Mixin
+Thanks to http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+/* 
+Column Mixin:
+We're defining the default values as follows:
+Default Column Count: Max Column Count
+Padding (explained below): 0
+Margin is the gutter width, but can be overridden 
+ */
+/* 
+Finally, we need a wrapper for our columns. 
+This typically is a main content wrapper, 
+But just in case someone finds an alternative use of this, 
+we shouldhave the flexibility
+So wrapper( column count, center ?, subtract)
+ */
+/* 
+To be able to use columns inside another element,
+You need to set that element to be a container (of how many columns)
+So: @include container(x_number_of_columns)
+ */
+/* Container Alias */
+#wrapper {
+  /* Because this is a wrapper, we don't need the outer gutter - we need the full width */
+  /* In case there is a need to subtract the wrapper */
+  width: 960px;
+  /* If we want the wrapper to be centered (by default we do) */
+  margin-left: auto;
+  margin-right: auto;
+  /* And clear the mess afterwards: */
+  *zoom: 1; }
+  #wrapper:before, #wrapper:after {
+    content: "";
+    display: table; }
+  #wrapper:after {
+    clear: both; }
