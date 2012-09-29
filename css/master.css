@@ -87,17 +87,108 @@ You need to set that element to be a container (of how many columns)
 So: @include container(x_number_of_columns)
  */
 /* Container Alias */
-#wrapper {
-  /* Because this is a wrapper, we don't need the outer gutter - we need the full width */
-  /* In case there is a need to subtract the wrapper */
-  width: 960px;
-  /* If we want the wrapper to be centered (by default we do) */
-  margin-left: auto;
-  margin-right: auto;
-  /* And clear the mess afterwards: */
-  *zoom: 1; }
-  #wrapper:before, #wrapper:after {
-    content: "";
-    display: table; }
-  #wrapper:after {
-    clear: both; }
+@media only screen and (min-width: 320px) {
+  #wrapper {
+    /* Because this is a wrapper, we don't need the outer gutter - we need the full width */
+    /* In case there is a need to subtract the wrapper */
+    width: 320px;
+    /* If we want the wrapper to be centered (by default we do) */
+    margin-left: auto;
+    margin-right: auto;
+    /* And clear the mess afterwards: */
+    *zoom: 1; }
+    #wrapper:before, #wrapper:after {
+      content: "";
+      display: table; }
+    #wrapper:after {
+      clear: both; }
+
+  header {
+    display: inline;
+    float: left;
+    /* Use the width calculation function to get  */
+    width: 320px; } }
+@media only screen and (min-width: 480px) {
+  #wrapper {
+    /* Because this is a wrapper, we don't need the outer gutter - we need the full width */
+    /* In case there is a need to subtract the wrapper */
+    width: 480px;
+    /* If we want the wrapper to be centered (by default we do) */
+    margin-left: auto;
+    margin-right: auto;
+    /* And clear the mess afterwards: */
+    *zoom: 1; }
+    #wrapper:before, #wrapper:after {
+      content: "";
+      display: table; }
+    #wrapper:after {
+      clear: both; }
+
+  header {
+    display: inline;
+    float: left;
+    /* Use the width calculation function to get  */
+    width: 480px; } }
+@media only screen and (min-width: 768px) {
+  #wrapper {
+    /* Because this is a wrapper, we don't need the outer gutter - we need the full width */
+    /* In case there is a need to subtract the wrapper */
+    width: 760px;
+    /* If we want the wrapper to be centered (by default we do) */
+    margin-left: auto;
+    margin-right: auto;
+    /* And clear the mess afterwards: */
+    *zoom: 1; }
+    #wrapper:before, #wrapper:after {
+      content: "";
+      display: table; }
+    #wrapper:after {
+      clear: both; }
+
+  header {
+    display: inline;
+    float: left;
+    /* Use the width calculation function to get  */
+    width: 760px; } }
+@media only screen and (min-width: 1024px) {
+  #wrapper {
+    /* Because this is a wrapper, we don't need the outer gutter - we need the full width */
+    /* In case there is a need to subtract the wrapper */
+    width: 1008px;
+    /* If we want the wrapper to be centered (by default we do) */
+    margin-left: auto;
+    margin-right: auto;
+    /* And clear the mess afterwards: */
+    *zoom: 1; }
+    #wrapper:before, #wrapper:after {
+      content: "";
+      display: table; }
+    #wrapper:after {
+      clear: both; }
+
+  header {
+    display: inline;
+    float: left;
+    /* Use the width calculation function to get  */
+    width: 1008px; } }
+@media only screen and (min-width: 1140px) {
+  #wrapper {
+    /* Because this is a wrapper, we don't need the outer gutter - we need the full width */
+    /* In case there is a need to subtract the wrapper */
+    width: 1120px;
+    /* If we want the wrapper to be centered (by default we do) */
+    margin-left: auto;
+    margin-right: auto;
+    /* And clear the mess afterwards: */
+    *zoom: 1; }
+    #wrapper:before, #wrapper:after {
+      content: "";
+      display: table; }
+    #wrapper:after {
+      clear: both; }
+
+  header {
+    display: inline;
+    float: left;
+    /* Use the width calculation function to get  */
+    width: 1120px; } }

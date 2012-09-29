@@ -2,10 +2,74 @@
 @import "compass/reset";
 @import "partials/blankwork";
 
-#wrapper {
-   @include wrapper;
-}
 
 @media only screen and (min-width: 320px) {
+   $_columns: 4;
+   $_column-width: 60px;
+   $_width: $_columns * ($_column-width + $_gutter);
    
+   #wrapper {
+      @include wrapper;
+   }
+   
+   header {
+      @include container;
+   }
+}
+
+@media only screen and (min-width: 480px) {
+   $_columns: 6;
+   $_column-width: 60px;
+   $_width: $_columns * ($_column-width + $_gutter);
+   
+   #wrapper {
+      @include wrapper;
+   }
+   
+   header {
+      @include container;
+   }
+}
+
+@media only screen and (min-width: 768px) {
+   $_columns: 10;
+   $_column-width: 56px;
+   $_width: $_columns * ($_column-width + $_gutter);
+   
+   #wrapper {
+      @include wrapper;
+   }
+   
+   header {
+      @include container;
+   }
+}
+
+@media only screen and (min-width: 1024px) {
+   $_columns: 12;
+   $_column-width: 64px;
+   $_width: $_columns * ($_column-width + $_gutter);
+   
+   #wrapper {
+      @include wrapper;
+   }
+   
+   header {
+      @include container;
+   }
+   
+}
+
+@media only screen and (min-width: 1140px) {
+   $_columns: 14;
+   $_column-width: 60px;
+   $_width: $_columns * ($_column-width + $_gutter);
+   
+   #wrapper {
+      @include wrapper;
+   }
+   
+   header {
+      @include container;
+   }
 }
